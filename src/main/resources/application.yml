@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: navan-transaction-invoice
+  jackson:
+    property-naming-strategy: SNAKE_CASE
+    default-property-inclusion: non_null
+    serialization:
+      write-dates-as-timestamps: false
+    deserialization:
+      fail-on-unknown-properties: true
+      use-big-decimal-for-floats: true
+    time-zone: UTC
+  datasource:
+    url: "jdbc:sqlite:./data/navan.db?foreign_keys=on&busy_timeout=10000&journal_mode=WAL"
+    driver-class-name: org.sqlite.JDBC
+  sql:
+    init:
+      mode: always
+      schema-locations: classpath:schema.sql
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate.dialect: org.hibernate.community.dialect.SQLiteDialect
+      hibernate.jdbc.time_zone: UTC
+      hibernate.default_batch_fetch_size: 100
+
+server:
+  port: 8080
