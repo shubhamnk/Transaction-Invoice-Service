@@ -1,0 +1,23 @@
+{
+  "type": "flight",
+  "external_id": "flight-JFK-SFO-2026-03-11",
+  "currency": "USD",
+  "occurred_at": "2026-03-11T12:00:00Z",
+  "total": 410.0,
+  "tax_lines": [],
+  "fee_lines": [],
+  "metadata": {
+    "origin": "JFK",
+    "destination": "SFO",
+    "fare": 410.0,
+    "coupons": [
+      {
+        "flight_number": "UA123",
+        "from": "JFK",
+        "to": "SFO",
+        "departure": "2026-03-11T12:00:00Z",
+        "arrival": "2026-03-11T15:20:00Z"
+      }
+    ]
+  }
+}
